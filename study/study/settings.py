@@ -76,11 +76,8 @@ WSGI_APPLICATION = 'study.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'study',
-        'USER': 'root',
-        'PASSWORD': '141714'
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
