@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+        .back {
+            font-size: 20px;
+        }
+
+        form {
+            padding-top: 5%;
+        }
+
+        .back {
+            position: relative;
+            left: 40%;
+        }
+
+        h1 {
+            padding-top: 10%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="box">
+                    <h1 class="text-center"><strong>Html</strong></h1><br>
+
+
+                    <form method="POST" enctype="multipart/form-data">
+
+                        <p><label for="id_title"><strong>Title:</strong></label><input class="form-control" type="text" name="title" maxlength="1000" required id="id_title"></p> <br>
+                        <p><label for="id_definition"><strong>Definition:</strong></label> <textarea class="form-control" name="definition" cols="40" rows="10" maxlength="2000" required id="id_definition"></textarea></p><br>
+
+                        <p><label for="id_image">Image:</label> <input type="file" name="image" accept="image/*" id="id_image"></p>
+
+                        <br>
+                        <input class="button btn btn-lg btn-block btn-success" type="submit" name="" value="Add">
+                        <br><br>
+
+
+                        {% csrf_token %}
+
+                    </form>
+                </div>
+
+            </div>
+            <a role="button" class="back btn btn-secondary " href="/Htmlmain">&#9754; back</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

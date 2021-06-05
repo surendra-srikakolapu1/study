@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Base</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+        .row {
+            padding: 20%;
+
+        }
+
+        .box-element {
+            width: 110%;
+            height: 11vh;
+            background-color: red;
+            border-radius: 20px;
+
+        }
+
+        ul li a {
+            text-align: center;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="col-lg-12 col-md-12 col-sm-12 col-md-12 navbar navbar-expand-lg navbar-light bg-none">
+        <a class="navbar-brand" href="/"><strong style="text-align:center;">&#9754; back</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Djangomain">
+                        <h2>Django</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Pythonmain">
+                        <h2>Python</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Htmlmain">
+                        <h2>Html</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Cssmain">
+                        <h2>Css</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Jsmain">
+                        <h2>Javascript</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Bootstrapmain">
+                        <h2>Bootstrap</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Restmain">
+                        <h2>Rest api</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Jsonmain">
+                        <h2>Json</h2> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+
+    {% block content %}
+
+
+    {% endblock content %}
+
+</body>
+
+</html>

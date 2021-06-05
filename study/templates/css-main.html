@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+        .accordion {
+            background-color: #eee;
+            color: black;
+            cursor: pointer;
+            padding: 5px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+            transition: 0.4s;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            outline: none;
+            border: 1px solid black;
+
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+            outline: none;
+        }
+
+        .panel {
+            padding: 0 18px;
+            outline: none;
+            color: black;
+            font-family: fantasy;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border: 1px solid black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top: none;
+        }
+
+        .add {
+            position: relative;
+            bottom: 45px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+        <a style="position:relative;top:45px;" class="back btn btn-success" href="/">&#9754;</a>
+        <h1 class="text-center"><strong>Css</strong></h1>
+        <a class="add btn btn-success float-right" href="/Cssform">&#10010;</a>
+        <br>
+        <hr>
+
+        {% for css in csss %}
+        <button class="accordion"><strong>{{css.title|linebreaks}}</strong></button>
+        <div class="panel">
+            <p> <br>
+                {{css.definition|linebreaks}}
+            </p>
+            <img class="img-fluid" src="{{css.imageURL}}">
+        </div><br>
+
+        {% endfor %}
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+
+
+    </div>
+
+
+</body>
+
+</html>
